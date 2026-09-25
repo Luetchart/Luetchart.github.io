@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucía Etchart</title>
+<meta name="description" content="Growth & lifecycle marketing — and the products I build around it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFBF8;
+    --ink:#1b1e1a;
+    --muted:#6d726a;
+    --faint:#e7e7e0;
+    --accent:#2f6b45;
+    --accent-soft:#eaf1ec;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111310;
+      --ink:#eceee7;
+      --muted:#9aa093;
+      --faint:#282b25;
+      --accent:#7cc79c;
+      --accent-soft:#1b2620;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:40rem;
+    margin:0 auto;
+    padding:5.5rem 1.5rem 4rem;
+  }
+  a{color:inherit}
+
+  /* ---- header ---- */
+  .name{
+    font-family:"Fraunces",Georgia,serif;
+    font-optical-sizing:auto;
+    font-weight:500;
+    font-size:2.7rem;
+    line-height:1.05;
+    letter-spacing:-.01em;
+    margin:0 0 .5rem;
+  }
+  .tagline{
+    font-size:1.08rem;
+    color:var(--ink);
+    margin:0 0 1.15rem;
+    max-width:32rem;
+  }
+  .meta{
+    font-size:.92rem;
+    color:var(--muted);
+    line-height:2;
+  }
+  .meta a{
+    color:var(--muted);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:color .15s, border-color .15s;
+    padding-bottom:1px;
+    margin-right:1.15rem;
+  }
+  .meta a:hover{color:var(--accent);border-color:var(--accent)}
+  .loc{margin-right:1.15rem;white-space:nowrap}
+  .loc .dot{margin-right:.45rem}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+
+  /* ---- sections ---- */
+  section{margin-top:3rem}
+  .h{
+    font-family:"Fraunces",Georgia,serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:1.25rem;
+    color:var(--ink);
+    margin:0 0 1.25rem;
+  }
+
+  .item{
+    padding:0 0 1.35rem;
+    margin-bottom:1.35rem;
+    border-bottom:1px solid var(--faint);
+  }
+  .item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+  .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+  }
+  .title{font-weight:600;font-size:1.02rem;margin:0}
+  .title a{
+    text-decoration:none;
+    border-bottom:1px solid var(--accent);
+    transition:color .15s;
+  }
+  .title a:hover{color:var(--accent)}
+  .org{color:var(--muted);font-weight:400}
+  .when{
+    color:var(--muted);
+    font-size:.86rem;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .desc{margin:.4rem 0 0;color:var(--ink)}
+  .desc.soft{color:var(--muted)}
+
+  .tag{
+    display:inline-block;
+    font-size:.74rem;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:.12rem .5rem;
+    border-radius:999px;
+    white-space:nowrap;
+    flex-shrink:0;
+    vertical-align:middle;
+  }
+
+  .edu .row{margin-bottom:.55rem}
+  .edu .row:last-child{margin-bottom:0}
+
+  footer{
+    margin-top:3.5rem;
+    padding-top:1.25rem;
+    border-top:1px solid var(--faint);
+    font-size:.82rem;
+    color:var(--muted);
+  }
+
+  @media (max-width:520px){
+    .wrap{padding:3.5rem 1.25rem 3rem}
+    .name{font-size:2.2rem}
+    .row{flex-direction:column;gap:.15rem}
+    .when{font-size:.82rem}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <h1 class="name">Lucía Etchart</h1>
+    <p class="tagline">Growth &amp; lifecycle marketing by day. I build products the rest of the time.</p>
+    <div class="meta">
+      <span class="loc"><span class="dot"></span>Buenos Aires, Argentina</span>
+      <a href="https://www.linkedin.com/in/lucia-etchart">LinkedIn</a>
+      <!-- TODO: replace with your GitHub URL once the repo exists -->
+      <a href="#">GitHub</a>
+      <a href="mailto:etchartlucia22@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="h">Work</h2>
+
+    <div class="item">
+      <div class="row">
+        <p class="title">Customer Engagement Manager <span class="org">· PedidosYa</span></p>
+        <span class="when">2025 — Present</span>
+      </div>
+      <p class="desc">Lead lifecycle and engagement across 14 Latin American markets. I drive a cross-functional roadmap with product and data, shipped a personalization framework into the app, and was the early adopter who brought AI tooling into the marketing team.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <p class="title">Marketing Strategy Specialist <span class="org">· PedidosYa</span></p>
+        <span class="when">2022 — 2025</span>
+      </div>
+      <p class="desc">Ran growth initiatives across the funnel as data-driven experiments — hypothesis, test, roll out — and owned KPI definition and dashboards with full business scope.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <p class="title">Business Performance Analyst <span class="org">· PedidosYa</span></p>
+        <span class="when">2020 — 2022</span>
+      </div>
+      <p class="desc">Performance analysis and KPI/dashboard design across 15 markets, including the regional quick-commerce (Darkstores) operation.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h">Things I've built</h2>
+
+    <div class="item">
+      <div class="row">
+        <!-- TODO: link to a short walkthrough video (use dummy data, never real statements) -->
+        <p class="title"><a href="#">Clara</a></p>
+        <span class="tag">demo video</span>
+      </div>
+      <p class="desc soft">An AI-powered app that turns messy Argentine bank statements into clean personal finances. Built solo, end to end — Flask + Claude API.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <!-- TODO: link to a 60-sec Loom of it running; keep the app itself private -->
+        <p class="title"><a href="#">Sprint Board</a></p>
+        <span class="tag">demo video</span>
+      </div>
+      <p class="desc soft">A real-time sprint-planning app my marketing team uses day to day. React + Supabase.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <!-- TODO: this one is safe to host live (no sensitive data) — link the deployed demo -->
+        <p class="title"><a href="#">Groceries game</a></p>
+        <span class="tag">live demo</span>
+      </div>
+      <p class="desc soft">A playable browser prototype built to pitch an internal gamification vision — from concept to something stakeholders could click.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <!-- TODO: link to a short case-study page or PDF -->
+        <p class="title"><a href="#">Audience &amp; analytics tooling</a></p>
+        <span class="tag">case study</span>
+      </div>
+      <p class="desc soft">Internal tools: a branded audience-builder that sped up CRM segmentation, plus agentic BigQuery analytics that surfaces insights without waiting on engineering.</p>
+    </div>
+
+    <div class="item">
+      <div class="row">
+        <!-- TODO: link to a short case-study page or PDF -->
+        <p class="title"><a href="#">World Cup comms engine</a></p>
+        <span class="tag">case study</span>
+      </div>
+      <p class="desc soft">A CRM communications framework and a custom Gemini Gem that generated constraint-compliant push for the FIFA World Cup 2026, across 14 markets.</p>
+    </div>
+  </section>
+
+  <section class="edu">
+    <h2 class="h">Education</h2>
+    <div class="row">
+      <p class="title" style="font-weight:500">AI Agent Architecture <span class="org">· Universidad Torcuato Di Tella</span></p>
+      <span class="when">2026 · in progress</span>
+    </div>
+    <div class="row">
+      <p class="title" style="font-weight:500">Bachelor in Business Economics <span class="org">· Universidad Torcuato Di Tella</span></p>
+      <span class="when">2017 — 2021</span>
+    </div>
+    <div class="row">
+      <p class="title" style="font-weight:500">Data Analytics <span class="org">· Digital House</span></p>
+      <span class="when">2022</span>
+    </div>
+    <div class="row">
+      <p class="title" style="font-weight:500">Digital Marketing <span class="org">· University of Chicago</span></p>
+      <span class="when">2022</span>
+    </div>
+  </section>
+
+  <footer>
+    Hand-built as a single file of HTML and hosted on GitHub Pages — which is, itself, the point.
+  </footer>
+
+</main>
+</body>
+</html>
