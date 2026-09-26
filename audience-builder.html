@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audience Builder — Lucía Etchart</title>
+<meta name="description" content="Self-serve CRM segmentation for marketers — and the agentic-analytics architecture behind it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFBF8; --ink:#1b1e1a; --muted:#6d726a; --faint:#e7e7e0;
+    --accent:#2f6b45; --accent-soft:#eaf1ec;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111310; --ink:#eceee7; --muted:#9aa093; --faint:#282b25;
+      --accent:#7cc79c; --accent-soft:#1b2620;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:40rem;margin:0 auto;padding:3.5rem 1.5rem 4rem;}
+  a{color:inherit}
+  .back{display:inline-block;font-size:.9rem;color:var(--muted);
+    text-decoration:none;margin-bottom:2.5rem;border-bottom:1px solid transparent;
+    transition:color .15s,border-color .15s;padding-bottom:1px;}
+  .back:hover{color:var(--accent);border-color:var(--accent)}
+  .title{font-family:"Fraunces",Georgia,serif;font-optical-sizing:auto;
+    font-weight:500;font-size:2.4rem;line-height:1.05;letter-spacing:-.01em;margin:0 0 .55rem;}
+  .lede{font-size:1.1rem;margin:0 0 .8rem;max-width:34rem;}
+  .stack{font-size:.86rem;color:var(--muted);margin:0 0 2.4rem;}
+  section{margin-top:2.1rem}
+  .h{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;
+    font-size:1.15rem;color:var(--ink);margin:0 0 .55rem;}
+  section p{margin:0}
+  .decisions{list-style:none;margin:.1rem 0 0;padding:0}
+  .decisions li{position:relative;padding-left:1.15rem;margin-bottom:.55rem}
+  .decisions li:last-child{margin-bottom:0}
+  .decisions li::before{content:"";position:absolute;left:0;top:.62em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .media{margin-top:2.6rem;border:1px dashed var(--faint);border-radius:10px;
+    padding:2.4rem 1.5rem;text-align:center;color:var(--muted);font-size:.9rem;
+    background:var(--accent-soft)}
+  .media img{max-width:100%;border-radius:6px;display:block;margin:0 auto}
+  footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--faint);
+    font-size:.82rem;color:var(--muted);}
+  @media (max-width:520px){.wrap{padding:2.5rem 1.25rem 3rem}.title{font-size:2rem}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="index.html">&larr; Lucía Etchart</a>
+
+  <h1 class="title">Audience Builder</h1>
+  <p class="lede">Self-serve CRM segmentation for marketers — and the agentic-analytics architecture behind it.</p>
+  <p class="stack">Google Apps Script · BigQuery, Gemini CLI (MCP), Vertex AI</p>
+
+  <section>
+    <h2 class="h">The problem</h2>
+    <p>Building CRM audiences meant waiting on data or engineering, or writing SQL yourself — a bottleneck for a team moving fast across 14 markets.</p>
+  </section>
+
+  <section>
+    <h2 class="h">What I built</h2>
+    <p>Audience Builder Pro, a Google Apps Script tool in our brand identity that lets marketers assemble segments themselves. It sits inside a broader agentic-analytics architecture I designed: a structured data dictionary feeding Gemini CLI to query BigQuery through MCP, evolving from an Apps Script v1 toward a Vertex AI engine.</p>
+  </section>
+
+  <section>
+    <h2 class="h">Key decisions</h2>
+    <ul class="decisions">
+      <li>A structured data dictionary first — agentic querying is only as good as the schema it can understand.</li>
+      <li>Ship a simple Apps Script v1 to win adoption, then upgrade the engine underneath without changing the marketer's experience.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="h">Outcome</h2>
+    <!-- Optional: add a rough time-saved figure here if you have one — but no internal/proprietary numbers. -->
+    <p>Turned a technical, engineering-dependent task into something non-technical marketers do for themselves.</p>
+  </section>
+
+  <!-- MEDIA: screenshots with fake segment names/counts; redact anything internal. Example:  <img src="audiencebuilder-screenshot.png" alt="Audience Builder with sample segments"> -->
+  <div class="media">
+    Add screenshots of the tool here — with dummy segment names and counts.
+  </div>
+
+  <footer>One of a few things I've built. <a href="index.html" style="color:var(--accent);text-decoration:none">Back to all &rarr;</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprint Board — Lucía Etchart</title>
+<meta name="description" content="A real-time sprint tool my marketing team uses every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFBF8; --ink:#1b1e1a; --muted:#6d726a; --faint:#e7e7e0;
+    --accent:#2f6b45; --accent-soft:#eaf1ec;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111310; --ink:#eceee7; --muted:#9aa093; --faint:#282b25;
+      --accent:#7cc79c; --accent-soft:#1b2620;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:40rem;margin:0 auto;padding:3.5rem 1.5rem 4rem;}
+  a{color:inherit}
+  .back{display:inline-block;font-size:.9rem;color:var(--muted);
+    text-decoration:none;margin-bottom:2.5rem;border-bottom:1px solid transparent;
+    transition:color .15s,border-color .15s;padding-bottom:1px;}
+  .back:hover{color:var(--accent);border-color:var(--accent)}
+  .title{font-family:"Fraunces",Georgia,serif;font-optical-sizing:auto;
+    font-weight:500;font-size:2.4rem;line-height:1.05;letter-spacing:-.01em;margin:0 0 .55rem;}
+  .lede{font-size:1.1rem;margin:0 0 .8rem;max-width:34rem;}
+  .stack{font-size:.86rem;color:var(--muted);margin:0 0 2.4rem;}
+  section{margin-top:2.1rem}
+  .h{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;
+    font-size:1.15rem;color:var(--ink);margin:0 0 .55rem;}
+  section p{margin:0}
+  .decisions{list-style:none;margin:.1rem 0 0;padding:0}
+  .decisions li{position:relative;padding-left:1.15rem;margin-bottom:.55rem}
+  .decisions li:last-child{margin-bottom:0}
+  .decisions li::before{content:"";position:absolute;left:0;top:.62em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .media{margin-top:2.6rem;border:1px dashed var(--faint);border-radius:10px;
+    padding:2.4rem 1.5rem;text-align:center;color:var(--muted);font-size:.9rem;
+    background:var(--accent-soft)}
+  .media img{max-width:100%;border-radius:6px;display:block;margin:0 auto}
+  footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--faint);
+    font-size:.82rem;color:var(--muted);}
+  @media (max-width:520px){.wrap{padding:2.5rem 1.25rem 3rem}.title{font-size:2rem}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="index.html">&larr; Lucía Etchart</a>
+
+  <h1 class="title">Sprint Board</h1>
+  <p class="lede">A real-time sprint tool my marketing team uses every day.</p>
+  <p class="stack">React, TypeScript, Supabase, Vercel · built with Claude Code</p>
+
+  <section>
+    <h2 class="h">The problem</h2>
+    <p>Our marketing backlog had become a bloated dumping ground. Nothing kept the team focused on the sprint actually in front of us.</p>
+  </section>
+
+  <section>
+    <h2 class="h">What I built</h2>
+    <p>A shared, real-time sprint app (React/TypeScript on Supabase Realtime, deployed on Vercel) with an active-sprint view, a filtered task list, a backlog, sprint versioning, CSV export, and a “Ver con Maru” flag for director check-ins.</p>
+  </section>
+
+  <section>
+    <h2 class="h">Key decisions</h2>
+    <ul class="decisions">
+      <li>No login — trust-based access for a two-person team, chosen for zero friction over unnecessary security ceremony.</li>
+      <li>A built-in Ideas &amp; Bugs drawer wired to an automated pipeline that turns feedback into GitHub Issues, so the tool improves itself.</li>
+      <li>Sprint versioning with copy-from-existing, so each new sprint starts from the last one rather than a blank page.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="h">Outcome</h2>
+    <p>In daily use by my team, and iterated through its own feedback loop.</p>
+  </section>
+
+  <!-- MEDIA: use a short Loom or screenshots with fake tasks. Do NOT link or expose the live team instance (it holds real data). Example:  <img src="sprintboard-screenshot.png" alt="Sprint Board with sample tasks"> -->
+  <div class="media">
+    Add a 60-second walkthrough or screenshots here — with dummy sprint data.
+  </div>
+
+  <footer>One of a few things I've built. <a href="index.html" style="color:var(--accent);text-decoration:none">Back to all &rarr;</a></footer>
+</main>
+</body>
+</html>
