@@ -43,10 +43,10 @@
   .decisions li:last-child{margin-bottom:0}
   .decisions li::before{content:"";position:absolute;left:0;top:.62em;
     width:6px;height:6px;border-radius:50%;background:var(--accent)}
-  .media{margin-top:2.6rem;border:1px dashed var(--faint);border-radius:10px;
-    padding:2.4rem 1.5rem;text-align:center;color:var(--muted);font-size:.9rem;
-    background:var(--accent-soft)}
-  .media img{max-width:100%;border-radius:6px;display:block;margin:0 auto}
+  .shot{margin:1.4rem 0 0}
+  .shot:first-of-type{margin-top:.4rem}
+  .shot img{display:block;width:100%;height:auto;border:1px solid var(--faint);border-radius:8px}
+  .shot figcaption{margin-top:.6rem;font-size:.92rem;color:var(--muted)}
   footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--faint);
     font-size:.82rem;color:var(--muted);}
   @media (max-width:520px){.wrap{padding:2.5rem 1.25rem 3rem}.title{font-size:2rem}}
@@ -84,10 +84,35 @@
     <p>A working product I run on my own finances — scoped, built, and shipped end to end as a non-engineer.</p>
   </section>
 
-  <!-- MEDIA: drop an image or video. Example image:  <img src="clara-screenshot.png" alt="Clara dashboard with sample data">  — NEVER use a real bank statement; use dummy data only. -->
-  <div class="media">
-    Add a screenshot or short walkthrough here — with invented transactions and merchant names.
-  </div>
+  <section>
+    <h2 class="h">A look inside</h2>
+    <p>A first upload by a brand-new user, with two invented statements (BBVA and Banco Nación) and made-up amounts.</p>
+
+    <figure class="shot">
+      <img src="img/clara/clara-upload-detection.jpg" alt="Clara's upload confirmation screen listing a BBVA and a Banco Nación statement, each with its detected bank, month and transaction count, above a checklist for the month and inputs for rent and utilities" width="640" height="712" loading="lazy">
+      <figcaption>Statements from different banks go in together. Before processing anything, Clara shows which bank and month it detected in each file and how many transactions it found, so a wrong guess gets fixed here, not later. It also asks for the fixed costs that never appear on a card, like rent and utilities.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/clara/clara-ai-review.jpg" alt="Review screen titled 'Clara revisó tus gastos' showing 39 transactions, 34 recognized automatically and 87% confidence, with spending grouped by category" width="680" height="722" loading="lazy">
+      <figcaption>Claude categorizes every transaction, and merchants Clara has already seen come straight from memory. Here 34 of 39 were recognized automatically. Everything is grouped by category for a quick check, and any correction is remembered for next time.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/clara/clara-usd-payments.jpg" alt="Dollar payments panel listing Netflix, Claude.ai and Airbnb charges in US dollars, with the amount to buy before the card's due date and the estimated tax saving" width="732" height="398" loading="lazy">
+      <figcaption>Dollar charges are converted at the MEP rate of the day they happened. Clara then shows the local workaround: buy those dollars yourself before the card's due date instead of letting the bank convert them, with an estimate of what that saves in taxes.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/clara/clara-gap-grids.jpg" alt="Home screen grid titled '¿Qué te falta cargar?' showing income, each bank's statement and each fixed cost across August to October, with September filled in" width="618" height="692" loading="lazy">
+      <figcaption>The numbers are only as good as what's been uploaded, so the home screen opens with what's loaded and what's missing: income, each bank's statement and every recurring cost, month by month. Any gap can be filled right there.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/clara/clara-home-overview.jpg" alt="Home overview with spending versus money paid out for September, a 62% savings rate, a spending donut, and separate due dates for each card" width="627" height="570" loading="lazy">
+      <figcaption>Two numbers instead of one: what was spent in the month, and what actually leaves the account that month, since card bills are paid the month after. Savings are measured against the second. Each card's due date is read from its own statement.</figcaption>
+    </figure>
+  </section>
 
   <footer>One of a few things I've built. <a href="index.html" style="color:var(--accent);text-decoration:none">Back to all &rarr;</a></footer>
 </main>
