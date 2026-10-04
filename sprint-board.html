@@ -43,10 +43,12 @@
   .decisions li:last-child{margin-bottom:0}
   .decisions li::before{content:"";position:absolute;left:0;top:.62em;
     width:6px;height:6px;border-radius:50%;background:var(--accent)}
-  .media{margin-top:2.6rem;border:1px dashed var(--faint);border-radius:10px;
-    padding:2.4rem 1.5rem;text-align:center;color:var(--muted);font-size:.9rem;
-    background:var(--accent-soft)}
-  .media img{max-width:100%;border-radius:6px;display:block;margin:0 auto}
+  .shot{margin:1.4rem 0 0}
+  .shot:first-of-type{margin-top:.4rem}
+  .shot img{display:block;width:100%;height:auto;border:1px solid var(--faint);border-radius:8px}
+  .shot img.narrow{max-width:28rem}
+  .shot img.narrower{max-width:23rem}
+  .shot figcaption{margin-top:.6rem;font-size:.92rem;color:var(--muted)}
   footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--faint);
     font-size:.82rem;color:var(--muted);}
   @media (max-width:520px){.wrap{padding:2.5rem 1.25rem 3rem}.title{font-size:2rem}}
@@ -84,10 +86,35 @@
     <p>In daily use by my team, and iterated through its own feedback loop.</p>
   </section>
 
-  <!-- MEDIA: use a short Loom or screenshots with fake tasks. Do NOT link or expose the live team instance (it holds real data). Example:  <img src="sprintboard-screenshot.png" alt="Sprint Board with sample tasks"> -->
-  <div class="media">
-    Add a 60-second walkthrough or screenshots here — with dummy sprint data.
-  </div>
+  <section>
+    <h2 class="h">A look inside</h2>
+    <p>Shown with a demo copy and invented sprints, projects and tasks.</p>
+
+    <figure class="shot">
+      <img src="img/sprint-board/sprint-board-active-sprint.jpg" alt="Active sprint view with four project cards showing their area, priority, definition of done and task progress; one is highlighted yellow as waiting on another team and one green as finished" width="1232" height="975" loading="lazy">
+      <figcaption>The sprint at a glance: each project with its priority, progress and definition of done. A project waiting on another team turns yellow and says who it's waiting for. A finished one turns green.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/sprint-board/sprint-board-task-list.jpg" alt="Sprint tasks grouped by project, with filter pills for each person and each status, and a flag on every task" width="1148" height="1054" loading="lazy">
+      <figcaption>Every task in the sprint, grouped by project, with one-tap filters by person and status. The flag marks a task to review with our director, and flagged tasks collect in their own “Ver con Maru” list for check-ins.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img class="narrow" src="img/sprint-board/sprint-board-ideas-bugs.jpg" alt="Ideas and Bugs drawer with a form to submit an idea or a bug, plus lists of submitted and resolved items" width="960" height="1080" loading="lazy">
+      <figcaption>Anyone on the team can log an idea or a bug without leaving the board. A script turns new entries into GitHub issues, which I pick up in my next Claude Code session, so the tool keeps improving from its own use.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/sprint-board/sprint-board-close-summary.jpg" alt="Sprint close summary with three columns for completed, in progress, and not started or blocked tasks, and a list of tasks that pass to the next sprint" width="1204" height="988" loading="lazy">
+      <figcaption>Closing a sprint shows what got done, what's still in progress and what never started, and lists the tasks that carry over to the next one. The summary can be exported to CSV.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img class="narrower" src="img/sprint-board/sprint-board-new-sprint.jpg" alt="New sprint form with the option to start from scratch or copy an existing sprint, a source sprint selector and a checkbox to bring only unfinished projects" width="700" height="780" loading="lazy">
+      <figcaption>A new sprint can start blank or as a copy of an existing one, optionally bringing only the projects that aren't finished, so planning picks up where the last sprint left off.</figcaption>
+    </figure>
+  </section>
 
   <footer>One of a few things I've built. <a href="index.html" style="color:var(--accent);text-decoration:none">Back to all &rarr;</a></footer>
 </main>
