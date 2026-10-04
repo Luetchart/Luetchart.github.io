@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clara — Lucía Etchart</title>
+<meta name="description" content="Una app de finanzas con IA que convierte los resúmenes desordenados de los bancos argentinos en finanzas personales claras.">
+<link rel="alternate" hreflang="en" href="https://luetchart.github.io/clara.html">
+<link rel="alternate" hreflang="es" href="https://luetchart.github.io/es/clara.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFBF8; --ink:#1b1e1a; --muted:#6d726a; --faint:#e7e7e0;
+    --accent:#2f6b45; --accent-soft:#eaf1ec;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111310; --ink:#eceee7; --muted:#9aa093; --faint:#282b25;
+      --accent:#7cc79c; --accent-soft:#1b2620;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:40rem;margin:0 auto;padding:3.5rem 1.5rem 4rem;}
+  a{color:inherit}
+  .back{display:inline-block;font-size:.9rem;color:var(--muted);
+    text-decoration:none;margin-bottom:2.5rem;border-bottom:1px solid transparent;
+    transition:color .15s,border-color .15s;padding-bottom:1px;}
+  .back:hover{color:var(--accent);border-color:var(--accent)}
+  .title{font-family:"Fraunces",Georgia,serif;font-optical-sizing:auto;
+    font-weight:500;font-size:2.4rem;line-height:1.05;letter-spacing:-.01em;margin:0 0 .55rem;}
+  .lede{font-size:1.1rem;margin:0 0 .8rem;max-width:34rem;}
+  .stack{font-size:.86rem;color:var(--muted);margin:0 0 2.4rem;}
+  section{margin-top:2.1rem}
+  .h{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;
+    font-size:1.15rem;color:var(--ink);margin:0 0 .55rem;}
+  section p{margin:0}
+  .decisions{list-style:none;margin:.1rem 0 0;padding:0}
+  .decisions li{position:relative;padding-left:1.15rem;margin-bottom:.55rem}
+  .decisions li:last-child{margin-bottom:0}
+  .decisions li::before{content:"";position:absolute;left:0;top:.62em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .shot{margin:1.4rem 0 0}
+  .shot:first-of-type{margin-top:.4rem}
+  .shot img{display:block;width:100%;height:auto;border:1px solid var(--faint);border-radius:8px}
+  .shot figcaption{margin-top:.6rem;font-size:.92rem;color:var(--muted)}
+  footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--faint);
+    font-size:.82rem;color:var(--muted);}
+  @media (max-width:520px){.wrap{padding:2.5rem 1.25rem 3rem}.title{font-size:2rem}}
+  .lang{display:flex;justify-content:flex-end;gap:.75rem;font-size:.8rem;letter-spacing:.03em}
+  .lang a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;
+    transition:color .15s,border-color .15s;padding-bottom:1px}
+  .lang a:hover{color:var(--accent);border-color:var(--accent)}
+  .lang [aria-current]{color:var(--ink);font-weight:600}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:2.5rem}
+  .top .back{margin-bottom:0}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <a class="back" href="index.html">&larr; Lucía Etchart</a>
+    <nav class="lang" aria-label="Idioma"><a href="../clara.html" hreflang="en" lang="en">EN</a><span aria-current="page">ES</span></nav>
+  </div>
+
+  <h1 class="title">Clara</h1>
+  <p class="lede">Una app de finanzas con IA que convierte los resúmenes desordenados de los bancos argentinos en finanzas personales claras.</p>
+  <p class="stack">Proyecto personal · Flask, Claude API</p>
+
+  <section>
+    <h2 class="h">El problema</h2>
+    <p>Los resúmenes de bancos y tarjetas argentinos llegan como PDFs sin un formato común, y la realidad local (el dólar MEP, los mismos comercios de siempre) rompe cualquier app de presupuesto genérica.</p>
+  </section>
+
+  <section>
+    <h2 class="h">Qué construí</h2>
+    <p>Una app web en Flask, hecha por mí desde cero a lo largo de varias sesiones. Lee los PDFs de los resúmenes, categoriza cada consumo con la API de Claude, aplica la cotización del dólar MEP y recuerda cómo se categorizó cada comercio, así que se vuelve más precisa cuanto más se usa. La interfaz es cálida y deliberadamente minimalista.</p>
+  </section>
+
+  <section>
+    <h2 class="h">Decisiones clave</h2>
+    <ul class="decisions">
+      <li>Memoria de comercios en lugar de volver a clasificar todo cada vez: más rápido y más preciso con el tiempo.</li>
+      <li>La cotización MEP viene incorporada, porque acá la gente arma su presupuesto en pesos y dólares.</li>
+      <li>Pensada para PDFs, porque así es como los bancos argentinos entregan la información.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="h">Resultado</h2>
+    <p>Un producto que funciona y que uso para mis propias finanzas: definido, construido y lanzado de punta a punta sin ser ingeniera.</p>
+  </section>
+
+  <section>
+    <h2 class="h">Por dentro</h2>
+    <p>La primera carga de una usuaria nueva, con dos resúmenes inventados (BBVA y Banco Nación) y montos ficticios.</p>
+
+    <figure class="shot">
+      <img src="../img/clara/clara-upload-detection.jpg" alt="Pantalla de confirmación de carga de Clara con un resumen de BBVA y uno de Banco Nación, cada uno con el banco, el mes y la cantidad de consumos detectados, sobre una lista del mes y campos para alquiler y servicios" width="640" height="712" loading="lazy">
+      <figcaption>Los resúmenes de distintos bancos se cargan juntos. Antes de procesar nada, Clara muestra qué banco y qué mes detectó en cada archivo y cuántos consumos encontró, así un error se corrige acá y no después. También pide los gastos fijos que nunca aparecen en una tarjeta, como el alquiler y los servicios.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="../img/clara/clara-ai-review.jpg" alt="Pantalla de revisión 'Clara revisó tus gastos' con 39 consumos, 34 reconocidos automáticamente y 87% de confianza, con el gasto agrupado por categoría" width="680" height="722" loading="lazy">
+      <figcaption>Claude categoriza cada consumo, y los comercios que Clara ya conoce salen directo de su memoria. Acá se reconocieron 34 de 39 automáticamente. Todo se agrupa por categoría para revisarlo rápido, y cada corrección queda guardada para la próxima.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="../img/clara/clara-usd-payments.jpg" alt="Panel de pagos en dólares con consumos de Netflix, Claude.ai y Airbnb en dólares, el monto a comprar antes del vencimiento de la tarjeta y el ahorro estimado en impuestos" width="732" height="398" loading="lazy">
+      <figcaption>Los consumos en dólares se convierten al MEP del día en que se hicieron. Además, Clara muestra la jugada local: comprar esos dólares antes del vencimiento de la tarjeta en lugar de dejar que el banco los convierta, con una estimación de cuánto se ahorra en impuestos.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="../img/clara/clara-gap-grids.jpg" alt="Grilla de la pantalla de inicio '¿Qué te falta cargar?' con el ingreso, el resumen de cada banco y cada gasto fijo de agosto a octubre, con septiembre completo" width="618" height="692" loading="lazy">
+      <figcaption>Los números valen lo que vale lo que se cargó, así que la pantalla de inicio arranca mostrando qué está cargado y qué falta: el ingreso, el resumen de cada banco y cada gasto fijo, mes a mes. Cualquier hueco se completa ahí mismo.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="../img/clara/clara-home-overview.jpg" alt="Resumen de inicio con lo gastado y lo pagado en septiembre, una tasa de ahorro del 62%, un gráfico de gastos y el vencimiento de cada tarjeta por separado" width="627" height="570" loading="lazy">
+      <figcaption>Dos números en lugar de uno: lo que se gastó en el mes y lo que realmente sale de la cuenta ese mes, porque las tarjetas se pagan al mes siguiente. El ahorro se mide contra el segundo. El vencimiento de cada tarjeta se lee de su propio resumen.</figcaption>
+    </figure>
+  </section>
+
+  <footer>Una de las cosas que construí. <a href="index.html" style="color:var(--accent);text-decoration:none">Ver todo &rarr;</a></footer>
+</main>
+</body>
+</html>
