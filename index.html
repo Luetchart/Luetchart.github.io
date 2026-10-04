@@ -131,6 +131,13 @@
     vertical-align:middle;
   }
 
+  .project{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:1.6rem;align-items:center}
+  .project .row{flex-wrap:wrap;justify-content:flex-start;gap:.5rem}
+  .thumb{display:block;border:1px solid var(--faint);border-radius:8px;overflow:hidden;
+    transition:border-color .15s,transform .15s}
+  .thumb:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .thumb img{display:block;width:100%;height:auto;aspect-ratio:5/4;object-fit:cover;object-position:top}
+
   .edu .row{margin-bottom:.55rem}
   .edu .row:last-child{margin-bottom:0}
 
@@ -147,6 +154,7 @@
     .name{font-size:2.2rem}
     .row{flex-direction:column;gap:.15rem}
     .when{font-size:.82rem}
+    .project{grid-template-columns:1fr;gap:1rem}
   }
 </style>
 </head>
@@ -193,20 +201,26 @@
   <section>
     <h2 class="h">Things I've built</h2>
 
-    <div class="item">
-      <div class="row">
-        <p class="title"><a href="clara.html">Clara</a></p>
-        <span class="tag">case study</span>
+    <div class="item project">
+      <div>
+        <div class="row">
+          <p class="title"><a href="clara.html">Clara</a></p>
+          <span class="tag">case study</span>
+        </div>
+        <p class="desc soft">An AI-powered app that turns messy Argentine bank statements into clean personal finances. Built solo, end to end — Flask + Claude API.</p>
       </div>
-      <p class="desc soft">An AI-powered app that turns messy Argentine bank statements into clean personal finances. Built solo, end to end — Flask + Claude API.</p>
+      <a class="thumb" href="clara.html" aria-hidden="true" tabindex="-1"><img src="img/clara/clara-home-overview.jpg" alt="Clara home screen with monthly spending, savings rate, a spending donut and card due dates, using sample data" width="627" height="570" loading="lazy"></a>
     </div>
 
-    <div class="item">
-      <div class="row">
-        <p class="title"><a href="sprint-board.html">Sprint Board</a></p>
-        <span class="tag">case study</span>
+    <div class="item project">
+      <div>
+        <div class="row">
+          <p class="title"><a href="sprint-board.html">Sprint Board</a></p>
+          <span class="tag">case study</span>
+        </div>
+        <p class="desc soft">A real-time sprint-planning app my marketing team uses day to day. React + Supabase.</p>
       </div>
-      <p class="desc soft">A real-time sprint-planning app my marketing team uses day to day. React + Supabase.</p>
+      <a class="thumb" href="sprint-board.html" aria-hidden="true" tabindex="-1"><img src="img/sprint-board/sprint-board-active-sprint.jpg" alt="Sprint Board active sprint with four project cards showing priority and progress, using sample data" width="1232" height="975" loading="lazy"></a>
     </div>
   </section>
 
